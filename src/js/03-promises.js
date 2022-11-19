@@ -23,6 +23,7 @@ refs.form.addEventListener('submit', event => {
 
   if (delay <= 0 || step <= 0 || amount <= 0) {
     Notiflix.Notify.failure(`Inputs need to be filled (>0)`);
+    return;
   }
   for (let i = 0; i < amount; i += 1) {
     createPromise(i + 1, delay + step * i)
